@@ -23,8 +23,41 @@
     <script type="text/javascript"></script>
     <link as="font" rel="preload" href="https://fonts.cmsfly.com/css?family=Roboto+Regular:400&display=swap" />
     <link rel="stylesheet" href="https://fonts.cmsfly.com/css?family=Roboto+Regular:400&display=swap" />
-    <link rel="stylesheet" href="https://cdn.dorik.com/64f073c9ddc91c0034494272/css/automation.css?v=1693575326633" />
+    <link rel="stylesheet" href="https://cdn.dorik.com/64f073c9ddc91c0034494272/css/automation.css?v=1693666748208" />
     <link rel="stylesheet" href="https://assets.dorik.io/shared/aos.css" />
+    <style>
+        .clock-hand {
+            transform-origin: center;
+            animation: rotate 1s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        #explore-button,
+        #transform-button,
+        #transformed-data-button,
+        #classification-button,
+        #regression-button,
+        #fine-tune-button,
+        #report-button,
+        #model-button
+        {
+
+            opacity: 0;
+            /* Start with the elements hidden */
+            transition: opacity 0.5s ease-in-out;
+            /* Add a smooth transition effect */
+        }
+    </style>
 
 
 </head>
@@ -40,7 +73,7 @@
                         <div class="column-inner dorik-column-0rwclh4a  1/3">
                             <div class="dorik-navbar--wrapper dorik-nav-1nn8ny6h-wrapper  ">
                                 <div class="dorik-navbar dorik-nav-1nn8ny6h ">
-                                    <div class="dorik-navbar--brand"><a href="index.html"><img
+                                    <div class="dorik-navbar--brand"><a href="home"><img
                                                 src="https://cdn.dorik.com/6231c5ff317f6e0012e1bed0/64f073c9ddc91c0034494272/images/1_kckoq7sk.png"
                                                 alt="Logo Caption" width="500px" /></a></div><button
                                         aria-label="Navbar Toggle" class="dorik-navbar--toggle"
@@ -81,7 +114,7 @@
                                     Data to solve regression and classification tasks with just one click.</p>
                             </div>
                             <div class="dorik-button-n4w0gelw-wrapper  el-ib"><a
-                                    class="dorik-btn dorik-button-n4w0gelw  " href="index.html">Home</a></div>
+                                    class="dorik-btn dorik-button-n4w0gelw  " href="home">Home</a></div>
                             <div class="dorik-button-ec3c5w6y-wrapper  el-ib"><a
                                     class="dorik-btn dorik-button-ec3c5w6y  " href="automation#Automation"><svg
                                         aria-hidden="true" focusable="false" data-prefix="fas" data-icon="right-long"
@@ -151,7 +184,7 @@
                                     </span></h3>
                             </div>
                             <div class="dorik-wrapper dorik-heading-qy0oz245-wrapper ">
-                                <h1 class="dorik-heading dorik-heading-qy0oz245 "><span>Automation
+                                <h1 class="dorik-heading dorik-heading-qy0oz245 "><span>AUTOMATION
                                     </span></h1>
                             </div>
                             <div class="dorik-text dorik-text-hp9ergdg ">
@@ -166,8 +199,8 @@
         <div class="">
             <div class="container dorik-row-f3a21fwu-wrapper    ">
                 <div class="dorik-row-f3a21fwu  flex  ">
-                    <div class="col-lg-1/2 ">
-                        <div class="column-inner dorik-column-qfrjc8k7  1/2" data-aos="fade-right"
+                    <div class="col-lg-2/3 ">
+                        <div class="column-inner dorik-column-qfrjc8k7  2/3" data-aos="fade-right"
                             data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
                             <div class="dorik-text dorik-text-4uida0fi ">
                                 <p>First Step&nbsp;</p>
@@ -182,30 +215,70 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-1/2 ">
-                        <div class="column-inner dorik-column-49kskdql  1/2" data-aos="fade-left" data-aos-delay="200"
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dorik-column-49kskdql  1/3" data-aos="fade-left" data-aos-delay="200"
                             data-aos-duration="700" data-aos-once="true">
-                            <div class="dorik-button-eqmwid4v-wrapper  el-ib"><a
-                                    class="dorik-btn dorik-button-eqmwid4v  "
-                                    href="https://github.com/OsamaAlaa1/Autosa-AutoML-Application/blob/main/pipelines%20and%20ready%20functions/ML_General_Template.ipynb"
-                                    target="_blank" rel="noreferrer"><svg aria-hidden="true" focusable="false"
-                                        data-prefix="fas" data-icon="upload" class="svg-inline--fa fa-upload icon "
-                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                        data-testid="icon-test">
-                                        <path fill="currentColor"
-                                            d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64zM432 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
-                                        </path>
-                                    </svg> Upload</a></div>
+
+
+
+
+
+                            <form method="POST" action="/upload" enctype="multipart/form-data">
+                                <div class="dorik-button-eqmwid4v-wrapper el-ib">
+                                    <label class="dorik-btn dorik-button-eqmwid4v">
+
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="upload"
+                                            class="svg-inline--fa fa-upload icon" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                            data-testid="icon-test">
+                                            <path fill="currentColor"
+                                                d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64zM432 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z">
+                                            </path>
+                                        </svg>
+
+                                        <span id="upload-text">Upload</span>
+                                        <input type="file" name="file" style="display: none;" accept=".csv"
+                                            onchange="uploadFile(this);" />
+                                    </label>
+
+
+                                </div>
+
+                                <div id="loading" style="display: none; margin-left: 20px;">
+                                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                        clip-rule="evenodd">
+                                        <circle cx="12" cy="12" r="10" fill="none" stroke="#775DDA" stroke-width="2" />
+                                        <line class="clock-hand" x1="12" y1="12" x2="12" y2="6" stroke="#775DDA"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
+
+                                <div id="success" style="display: none; margin-left: 20px;">
+                                    <!-- Add your success icon (e.g., a green checkmark) -->
+                                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                        clip-rule="evenodd">
+                                        <path
+                                            d="M9.914 19.95l-6.293-6.294 1.414-1.414 4.879 4.879 12.374-12.374 1.414 1.414-13.788 13.789z"
+                                            fill="green" />
+                                    </svg>
+                                </div>
                         </div>
+                        </form>
+
                     </div>
                 </div>
             </div>
         </div>
+        </div>
+
+
+
+
         <div class="">
             <div class="container dorik-row-szs64osr-wrapper    ">
                 <div class="dorik-row-szs64osr  flex  ">
-                    <div class="col-lg-1/2 ">
-                        <div class="column-inner dorik-column-k3nvk3q1  1/2" data-aos="fade-right"
+                    <div class="col-lg-2/3 ">
+                        <div class="column-inner dorik-column-k3nvk3q1  2/3" data-aos="fade-right"
                             data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
                             <div class="dorik-text dorik-text-y6p6adyv ">
                                 <p>Second Step&nbsp;</p>
@@ -221,21 +294,27 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-1/2 ">
-                        <div class="column-inner dorik-column-frcqbcbv  1/2" data-aos="fade-left" data-aos-delay="200"
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dorik-column-frcqbcbv  1/3" data-aos="fade-left" data-aos-delay="200"
                             data-aos-duration="700" data-aos-once="true">
-                            <div class="dorik-button-qeiu7bp4-wrapper  el-ib"><a
-                                    class="dorik-btn dorik-button-qeiu7bp4  "
-                                    href="https://github.com/OsamaAlaa1/Autosa-AutoML-Application/blob/main/pipelines%20and%20ready%20functions/ML_General_Template.ipynb"
-                                    target="_blank" rel="noreferrer"><svg aria-hidden="true" focusable="false"
-                                        data-prefix="fab" data-icon="wpexplorer"
-                                        class="svg-inline--fa fa-wpexplorer icon " role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                        data-testid="icon-test">
-                                        <path fill="currentColor"
-                                            d="M512 256c0 141.2-114.7 256-256 256C114.8 512 0 397.3 0 256S114.7 0 256 0s256 114.7 256 256zm-32 0c0-123.2-100.3-224-224-224C132.5 32 32 132.5 32 256s100.5 224 224 224 224-100.5 224-224zM160.9 124.6l86.9 37.1-37.1 86.9-86.9-37.1 37.1-86.9zm110 169.1l46.6 94h-14.6l-50-100-48.9 100h-14l51.1-106.9-22.3-9.4 6-14 68.6 29.1-6 14.3-16.5-7.1zm-11.8-116.3l68.6 29.4-29.4 68.3L230 246l29.1-68.6zm80.3 42.9l54.6 23.1-23.4 54.3-54.3-23.1 23.1-54.3z">
-                                        </path>
-                                    </svg>Explore </a></div>
+
+
+                            <form method="POST" action="/explore" enctype="multipart/form-data">
+                                <div class="dorik-button-qeiu7bp4-wrapper el-ib">
+                                    <button class="dorik-btn dorik-button-qeiu7bp4" id="explore-button" type="button">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab"
+                                            data-icon="wpexplorer" class="svg-inline--fa fa-wpexplorer icon " role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                            data-testid="icon-test">
+                                            <path fill="currentColor"
+                                                d="M512 256c0 141.2-114.7 256-256 256C114.8 512 0 397.3 0 256S114.7 0 256 0s256 114.7 256 256zm-32 0c0-123.2-100.3-224-224-224C132.5 32 32 132.5 32 256s100.5 224 224 224 224-100.5 224-224zM160.9 124.6l86.9 37.1-37.1 86.9-86.9-37.1 37.1-86.9zm110 169.1l46.6 94h-14.6l-50-100-48.9 100h-14l51.1-106.9-22.3-9.4 6-14 68.6 29.1-6 14.3-16.5-7.1zm-11.8-116.3l68.6 29.4-29.4 68.3L230 246l29.1-68.6zm80.3 42.9l54.6 23.1-23.4 54.3-54.3-23.1 23.1-54.3z">
+                                            </path>
+                                        </svg>
+                                        <span id="explore-text">Explore</span>
+                                    </button>
+                                </div>
+                            </form>
+
                         </div>
                     </div>
                 </div>
@@ -261,37 +340,68 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
+
+
+
+
                     <div class="col-lg-1/4 ">
-                        <div class="column-inner dorik-column-uxhwbfu9  1/4" data-aos="fade-left" data-aos-delay="200"
+                        <div class="column-inner dorik-column-nmn1e43i  1/4" data-aos="fade-left" data-aos-delay="200"
                             data-aos-duration="700" data-aos-once="true">
-                            <div class="dorik-button-lvccz3yr-wrapper  el-ib"><a
-                                    class="dorik-btn dorik-button-lvccz3yr  "
-                                    href="https://github.com/OsamaAlaa1/Autosa-AutoML-Application/blob/main/pipelines%20and%20ready%20functions/ML_General_Template.ipynb"
-                                    target="_blank" rel="noreferrer"><svg aria-hidden="true" focusable="false"
-                                        data-prefix="fas" data-icon="hands-asl-interpreting"
-                                        class="svg-inline--fa fa-hands-asl-interpreting icon " role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                            <div class="dorik-button-h7ql5vdc-wrapper  el-ib">
+
+                                <button class="dorik-btn dorik-button-h7ql5vdc" id="transform-button" type="button">
+
+                                    <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                        data-icon="star-half-stroke" class="svg-inline--fa fa-star-half-stroke icon "
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
                                         data-testid="icon-test">
                                         <path fill="currentColor"
-                                            d="M156.6 46.3c7.9-15.8 1.5-35-14.3-42.9s-35-1.5-42.9 14.3L13.5 189.4C4.6 207.2 0 226.8 0 246.7V256c0 70.7 57.3 128 128 128h72 8v-.3c35.2-2.7 65.4-22.8 82.1-51.7c8.8-15.3 3.6-34.9-11.7-43.7s-34.9-3.6-43.7 11.7c-7 12-19.9 20-34.7 20c-22.1 0-40-17.9-40-40s17.9-40 40-40c14.8 0 27.7 8 34.7 20c8.8 15.3 28.4 20.5 43.7 11.7s20.5-28.4 11.7-43.7c-12.8-22.1-33.6-39.1-58.4-47.1l80.8-22c17-4.6 27.1-22.2 22.5-39.3s-22.2-27.1-39.3-22.5L194.9 124.6l81.6-68c13.6-11.3 15.4-31.5 4.1-45.1S249.1-3.9 235.5 7.4L133.6 92.3l23-46zM483.4 465.7c-7.9 15.8-1.5 35 14.3 42.9s35 1.5 42.9-14.3l85.9-171.7c8.9-17.8 13.5-37.4 13.5-57.2V256c0-70.7-57.3-128-128-128H440h-8v.3c-35.2 2.7-65.4 22.8-82.1 51.7c-8.9 15.3-3.6 34.9 11.7 43.7s34.9 3.6 43.7-11.7c7-12 19.9-20 34.7-20c22.1 0 40 17.9 40 40s-17.9 40-40 40c-14.8 0-27.7-8-34.7-20c-8.9-15.3-28.4-20.5-43.7-11.7s-20.5 28.4-11.7 43.7c12.8 22.1 33.6 39.1 58.4 47.1l-80.8 22c-17.1 4.7-27.1 22.2-22.5 39.3s22.2 27.1 39.3 22.5l100.7-27.5-81.6 68c-13.6 11.3-15.4 31.5-4.1 45.1s31.5 15.4 45.1 4.1l101.9-84.9-23 46z">
+                                            d="M341.5 13.5C337.5 5.2 329.1 0 319.9 0s-17.6 5.2-21.6 13.5L229.7 154.8 76.5 177.5c-9 1.3-16.5 7.6-19.3 16.3s-.5 18.1 5.9 24.5L174.2 328.4 148 483.9c-1.5 9 2.2 18.1 9.7 23.5s17.3 6 25.3 1.7l137-73.2 137 73.2c8.1 4.3 17.9 3.7 25.3-1.7s11.2-14.5 9.7-23.5L465.6 328.4 576.8 218.2c6.5-6.4 8.7-15.9 5.9-24.5s-10.3-14.9-19.3-16.3L410.1 154.8 341.5 13.5zM320 384.7V79.1l52.5 108.1c3.5 7.1 10.2 12.1 18.1 13.3l118.3 17.5L423 303c-5.5 5.5-8.1 13.3-6.8 21l20.2 119.6L331.2 387.5c-3.5-1.9-7.4-2.8-11.2-2.8z">
                                         </path>
-                                    </svg>Transform</a></div>
+                                    </svg>
+
+                                    <span id="transform-text">Transform</span>
+                                </button>
+
+                            </div>
                         </div>
                     </div>
+
+
+
+
+
+
+
+
+
+
+
                     <div class="col-lg-1/4 ">
                         <div class="column-inner dorik-column-q4rxdhvl  1/4" data-aos="fade-left" data-aos-delay="200"
                             data-aos-duration="700" data-aos-once="true">
-                            <div class="dorik-button-jcbc66d1-wrapper  el-ib"><a
-                                    class="dorik-btn dorik-button-jcbc66d1  "
-                                    href="https://github.com/OsamaAlaa1/Autosa-AutoML-Application/blob/main/pipelines%20and%20ready%20functions/ML_General_Template.ipynb"
-                                    target="_blank" rel="noreferrer"><svg aria-hidden="true" focusable="false"
-                                        data-prefix="fas" data-icon="download" class="svg-inline--fa fa-download icon "
-                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                            <div class="dorik-button-jcbc66d1-wrapper  el-ib">
+
+
+                                <button class="dorik-btn dorik-button-jcbc66d1" id="transformed-data-button"
+                                    type="button" onclick="downloadFile('/download_transform','transformed_data.csv')">
+
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="download"
+                                        class="svg-inline--fa fa-download icon " role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                                         data-testid="icon-test">
                                         <path fill="currentColor"
                                             d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z">
                                         </path>
-                                    </svg>Transformed Data</a></div>
+                                    </svg>
+
+                                    <span id="transformed-data-text">Transformed Data</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -317,121 +427,159 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-1/5 ">
-                        <div class="column-inner dorik-column-480ocxs6  1/5" data-aos="fade-left" data-aos-delay="200"
+
+
+
+
+
+
+                    <div class="col-lg-2/5 ">
+                        <div class="column-inner dorik-column-480ocxs6  2/5" data-aos="fade-left" data-aos-delay="200"
                             data-aos-duration="700" data-aos-once="true">
-                            <div class="dorik-button-friz4g2j-wrapper  el-ib"><a
-                                    class="dorik-btn dorik-button-friz4g2j  "
-                                    href="https://github.com/OsamaAlaa1/Autosa-AutoML-Application/blob/main/pipelines%20and%20ready%20functions/ML_General_Template.ipynb"
-                                    target="_blank" rel="noreferrer">Classification</a></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-1/5 ">
-                        <div class="column-inner dorik-column-nn7qst18  1/5" data-aos="fade-left" data-aos-delay="200"
-                            data-aos-duration="700" data-aos-once="true">
-                            <div class="dorik-button-f7bdrnr7-wrapper  el-ib"><a
-                                    class="dorik-btn dorik-button-f7bdrnr7  "
-                                    href="https://github.com/OsamaAlaa1/Autosa-AutoML-Application/blob/main/pipelines%20and%20ready%20functions/ML_General_Template.ipynb"
-                                    target="_blank" rel="noreferrer">Regression</a></div>
+
+                            <form method="POST" action="/store_selection" id="selection-form">
+                                <button class="dorik-btn dorik-button-friz4g2j" id="classification-button" type="button"
+                                    onclick="selectOption('classification', this)">
+                                    <span id="classification-text">Classification</span>
+                                </button>
+                                <button class="dorik-btn dorik-button-friz4g2j" id="regression-button" type="button"
+                                    onclick="selectOption('regression', this)" style="margin-left: 30px;">
+                                    <span id="regression-text">Regression</span>
+                                </button>
+                                <!-- Hidden input field to store the selection -->
+                                <input type="hidden" name="selected_option" id="selected_option" value="">
+                            </form>
+
+
+
+
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="">
-            <div class="container dorik-row-6q6qa33x-wrapper    ">
-                <div class="dorik-row-6q6qa33x  flex  ">
-                    <div class="col-lg-1/2 ">
-                        <div class="column-inner dorik-column-hmmote4a  1/2" data-aos="fade-right"
-                            data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
-                            <div class="dorik-text dorik-text-6juggake ">
-                                <p>Fivth Step&nbsp;</p>
+                <div class="">
+                    <div class="container dorik-row-6q6qa33x-wrapper    ">
+                        <div class="dorik-row-6q6qa33x  flex  ">
+                            <div class="col-lg-2/3 ">
+                                <div class="column-inner dorik-column-hmmote4a  2/3" data-aos="fade-right"
+                                    data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
+                                    <div class="dorik-text dorik-text-6juggake ">
+                                        <p>Fivth Step&nbsp;</p>
+                                    </div>
+                                    <div class="dorik-wrapper dorik-heading-apgjv1pu-wrapper ">
+                                        <h3 class="dorik-heading dorik-heading-apgjv1pu "><span>05. Fine-Tuning
+                                            </span></h3>
+                                    </div>
+                                    <div class="dorik-text dorik-text-48x4mi5k ">
+                                        <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span> You can
+                                            browse
+                                            the functions used in this step and more in the Fine-Tuning notebook.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="dorik-wrapper dorik-heading-apgjv1pu-wrapper ">
-                                <h3 class="dorik-heading dorik-heading-apgjv1pu "><span>05. Fine-Tuning
-                                    </span></h3>
+
+
+
+                            <div class="col-lg-1/3 ">
+                                <div class="column-inner dorik-column-ef93iwns  1/3" data-aos="fade-left"
+                                    data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
+                                    <div class="dorik-button-nwnz57vw-wrapper  el-ib">
+
+                                        <button class="dorik-btn dorik-button-nwnz57vw" id="fine-tune-button"
+                                            type="button">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                                data-icon="square-caret-right"
+                                                class="svg-inline--fa fa-square-caret-right icon " role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                data-testid="icon-test">
+                                                <path fill="currentColor"
+                                                    d="M400 96c0-8.8-7.2-16-16-16L64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320zM384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM320 256c0 6.7-2.8 13-7.7 17.6l-112 104c-7 6.5-17.2 8.2-25.9 4.4s-14.4-12.5-14.4-22l0-208c0-9.5 5.7-18.2 14.4-22s18.9-2.1 25.9 4.4l112 104c4.9 4.5 7.7 10.9 7.7 17.6z">
+                                                </path>
+                                            </svg>
+
+                                            <span id="fine-tune-text">Fine-Tune</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="dorik-text dorik-text-48x4mi5k ">
-                                <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span> You can browse
-                                    the functions used in this step and more in the Fine-Tuning notebook.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-1/2 ">
-                        <div class="column-inner dorik-column-ef93iwns  1/2" data-aos="fade-left" data-aos-delay="200"
-                            data-aos-duration="700" data-aos-once="true">
-                            <div class="dorik-button-nwnz57vw-wrapper  el-ib"><a
-                                    class="dorik-btn dorik-button-nwnz57vw  "
-                                    href="https://github.com/OsamaAlaa1/Autosa-AutoML-Application/blob/main/pipelines%20and%20ready%20functions/ML_General_Template.ipynb"
-                                    target="_blank" rel="noreferrer"><svg aria-hidden="true" focusable="false"
-                                        data-prefix="far" data-icon="square-caret-right"
-                                        class="svg-inline--fa fa-square-caret-right icon " role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-                                        data-testid="icon-test">
-                                        <path fill="currentColor"
-                                            d="M400 96c0-8.8-7.2-16-16-16L64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320zM384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM320 256c0 6.7-2.8 13-7.7 17.6l-112 104c-7 6.5-17.2 8.2-25.9 4.4s-14.4-12.5-14.4-22l0-208c0-9.5 5.7-18.2 14.4-22s18.9-2.1 25.9 4.4l112 104c4.9 4.5 7.7 10.9 7.7 17.6z">
-                                        </path>
-                                    </svg>05. Fine-Tuning</a></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="">
-            <div class="container dorik-row-n75vggxk-wrapper    ">
-                <div class="dorik-row-n75vggxk  flex  ">
-                    <div class="col-lg-3/5 ">
-                        <div class="column-inner dorik-column-tw2ypedo  3/5" data-aos="fade-right"
-                            data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
-                            <div class="dorik-text dorik-text-xnryum2w ">
-                                <p>Sixth Step&nbsp;</p>
+
+
+                <div class="">
+                    <div class="container dorik-row-n75vggxk-wrapper    ">
+                        <div class="dorik-row-n75vggxk  flex  ">
+                            <div class="col-lg-3/5 ">
+                                <div class="column-inner dorik-column-tw2ypedo  3/5" data-aos="fade-right"
+                                    data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
+                                    <div class="dorik-text dorik-text-xnryum2w ">
+                                        <p>Final Step :)</p>
+                                    </div>
+                                    <div class="dorik-wrapper dorik-heading-opccozkj-wrapper ">
+                                        <h3 class="dorik-heading dorik-heading-opccozkj "><span>06. Download Report and
+                                                Model
+                                            </span></h3>
+                                    </div>
+                                    <div class="dorik-text dorik-text-vr64j37r ">
+                                        <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span> Download
+                                            the
+                                            final report, which contains all steps and the final model after
+                                            fine-tuning.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="dorik-wrapper dorik-heading-opccozkj-wrapper ">
-                                <h3 class="dorik-heading dorik-heading-opccozkj "><span>06. Download Report and Model
-                                    </span></h3>
+
+
+                            <div class="col-lg-1/5 ">
+                                <div class="column-inner dorik-column-e2ijrnvf  1/5" data-aos="fade-left"
+                                    data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
+                                    <div class="dorik-button-4xyj7ean-wrapper  el-ib">
+                                        <button class="dorik-btn dorik-button-4xyj7ean" id="report-button"
+                                            type="button" onclick="downloadFile('/download_report','report.pdf')">
+
+                                            <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                                data-icon="file-lines" class="svg-inline--fa fa-file-lines icon "
+                                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                                                data-testid="icon-test">
+                                                <path fill="currentColor"
+                                                    d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120z">
+                                                </path>
+                                            </svg>
+                                            <span id="report-text">Report</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="dorik-text dorik-text-vr64j37r ">
-                                <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span> Download the
-                                    final report, which contains all steps and the final model after fine-tuning.</p>
+
+
+                            <div class="col-lg-1/5 ">
+                                <div class="column-inner dorik-column-d4zwitan  1/5" data-aos="fade-left"
+                                    data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
+                                    
+                                    <div class="dorik-button-t6fwrlk0-wrapper  el-ib">
+                                        
+                                        <button class="dorik-btn dorik-button-t6fwrlk0" id="model-button"
+                                        type="button" onclick="downloadFile('/download_model','model.pkl')">
+                                            
+                                            <svg aria-hidden="true" focusable="false"
+                                                data-prefix="fas" data-icon="download"
+                                                class="svg-inline--fa fa-download icon " role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-testid="icon-test">
+                                                <path fill="currentColor"
+                                                    d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z">
+                                                </path>
+
+                                            </svg> 
+                                            <span id="model-text">Model</span>
+                                        </button>
+                                        
+                                        </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-1/5 ">
-                        <div class="column-inner dorik-column-e2ijrnvf  1/5" data-aos="fade-left" data-aos-delay="200"
-                            data-aos-duration="700" data-aos-once="true">
-                            <div class="dorik-button-4xyj7ean-wrapper  el-ib"><a
-                                    class="dorik-btn dorik-button-4xyj7ean  "
-                                    href="https://github.com/OsamaAlaa1/Autosa-AutoML-Application/blob/main/pipelines%20and%20ready%20functions/ML_General_Template.ipynb"
-                                    target="_blank" rel="noreferrer"><svg aria-hidden="true" focusable="false"
-                                        data-prefix="far" data-icon="file-lines"
-                                        class="svg-inline--fa fa-file-lines icon " role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                        data-testid="icon-test">
-                                        <path fill="currentColor"
-                                            d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120z">
-                                        </path>
-                                    </svg>Report </a></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-1/5 ">
-                        <div class="column-inner dorik-column-d4zwitan  1/5" data-aos="fade-left" data-aos-delay="200"
-                            data-aos-duration="700" data-aos-once="true">
-                            <div class="dorik-button-t6fwrlk0-wrapper  el-ib"><a
-                                    class="dorik-btn dorik-button-t6fwrlk0  "
-                                    href="https://github.com/OsamaAlaa1/Autosa-AutoML-Application/blob/main/pipelines%20and%20ready%20functions/ML_General_Template.ipynb"
-                                    target="_blank" rel="noreferrer"><svg aria-hidden="true" focusable="false"
-                                        data-prefix="fas" data-icon="download" class="svg-inline--fa fa-download icon "
-                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                        data-testid="icon-test">
-                                        <path fill="currentColor"
-                                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z">
-                                        </path>
-                                    </svg> Model </a></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
     </section>
     <section class="dorik-section symbol--2fxa25e8 dorik-section-pmojkr4a ">
         <div class="">
@@ -439,14 +587,14 @@
                 <div class="dorik-row-pjirj0z6  flex  ">
                     <div class="col-lg-1/4 col-md-1/2 col-xs-7/8 ">
                         <div class="column-inner dorik-column-97r0uug1  1/4"><a
-                                class="dorik-wrapper dorik-image-zyoz1ynr-wrapper " href="index.html"><img
+                                class="dorik-wrapper dorik-image-zyoz1ynr-wrapper " href="home"><img
                                     src="https://cdn.dorik.com/6231c5ff317f6e0012e1bed0/64f073c9ddc91c0034494272/images/1_h6ngyjcx.png"
                                     alt="" loading="lazy" class="dorik-image-zyoz1ynr " /></a></div>
                     </div>
                     <div class="col-lg-1/5 col-md-1/2 col-xs-7/8 ">
                         <div class="column-inner dorik-column-utv0lonf  1/5">
                             <ul class="dorik-list dorik-links-7dewpkcr ">
-                                <li class="dorik-list--item"><a href="index.html" class="dorik-list--link "><span
+                                <li class="dorik-list--item"><a href="home" class="dorik-list--link "><span
                                             class="dorik-list--icon"></span><span class="dorik-list--text">General
                                             Pipelines</span></a></li>
                                 <li class="dorik-list--item"><a href="automation" class="dorik-list--link "><span
@@ -668,6 +816,236 @@
             }, 500);
         }())
     </script>
+
+
+
+
+    <script>
+        function uploadFile(input) {
+            const fileInput = input;
+            const uploadText = document.getElementById('upload-text');
+            const loadingIndicator = document.getElementById('loading');
+            const successIcon = document.getElementById('success');
+
+            // add buttons 
+            const exploreButton = document.getElementById('explore-button');
+            const transformButton = document.getElementById('transform-button');
+            const clssificationButton = document.getElementById('classification-button');
+            const regressionButton = document.getElementById('regression-button');
+
+
+
+
+
+            const file = fileInput.files[0];
+            if (file) {
+                const formData = new FormData();
+                formData.append('file', file);
+
+                // Show loading indicator and hide upload text
+                loadingIndicator.style.display = 'inline-block';
+                //uploadText.style.display = 'none';
+
+                fetch('/upload', {
+                    method: 'POST',
+                    body: formData,
+                }).then(response => {
+                    if (response.ok) {
+                        // Hide the loading indicator and display the success icon
+                        loadingIndicator.style.display = 'none';
+                        successIcon.style.display = 'inline-block';
+
+                        // Show the buttons after a successful upload
+                        exploreButton.style.opacity = '1';
+                        transformButton.style.opacity = '1';
+                        clssificationButton.style.opacity = '1';
+                        regressionButton.style.opacity = '1';
+
+
+
+                        console.log('File uploaded successfully!');
+                    } else {
+                        console.error('File upload failed.');
+                    }
+                }).catch(error => {
+                    console.error('Error:', error);
+                }).finally(() => {
+                    // Show the "Upload" text again
+                    uploadText.style.display = 'inline-block';
+                });
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const exploreButton = document.getElementById('explore-button');
+            const buttonText = document.getElementById('explore-text');
+
+            exploreButton.addEventListener('click', function () {
+                // Disable the button and show the loading indicator
+                exploreButton.disabled = true;
+                buttonText.textContent = 'Loading...';
+
+                // Make an AJAX POST request to the Flask route
+                fetch('/explore', {
+                    method: 'POST',
+                })
+
+                    .then(function () {
+                        // Hide loading and show success
+                        buttonText.textContent = 'Completed';
+                    })
+                    .catch(function (error) {
+                        console.error('Error:', error);
+                        // Handle error here if necessary
+                    })
+                    .finally(function () {
+                        // Re-enable the button after execution
+                        exploreButton.disabled = false;
+                    });
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const transformButton = document.getElementById('transform-button');
+            const buttonText = document.getElementById('transform-text');
+            const transformedDataButton = document.getElementById('transformed-data-button');
+
+
+
+            transformButton.addEventListener('click', function () {
+                // Disable the button and show the loading indicator
+                transformButton.disabled = true;
+                buttonText.textContent = 'Loading...';
+
+                // Make an AJAX POST request to the Flask route
+                fetch('/transform', {
+                    method: 'POST',
+                })
+
+                    .then(function () {
+                        // Hide loading and show success
+                        buttonText.textContent = 'Completed';
+                        transformedDataButton.style.opacity = '1';
+                    })
+                    .catch(function (error) {
+                        console.error('Error:', error);
+                        // Handle error here if necessary
+                    })
+                    .finally(function () {
+                        // Re-enable the button after execution
+                        transformButton.disabled = false;
+                    });
+            });
+        });
+
+
+
+        // for Fine-Tune button 
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const FineTuneButton = document.getElementById('fine-tune-button');
+            const buttonText = document.getElementById('fine-tune-text');
+
+            const reportButton = document.getElementById('report-button');
+            const modelButton = document.getElementById('model-button');
+
+
+            FineTuneButton.addEventListener('click', function () {
+                // Disable the button and show the loading indicator
+                FineTuneButton.disabled = true;
+                buttonText.textContent = 'Loading...';
+
+                // Make an AJAX POST request to the Flask route
+                fetch('/fine_tune', {
+                    method: 'POST',
+                })
+
+                    .then(function () {
+                        // Hide loading and show success
+                        buttonText.textContent = 'Completed';
+                        reportButton.style.opacity = '1';
+                        modelButton.style.opacity = '1';
+                    })
+                    .catch(function (error) {
+                        console.error('Error:', error);
+                        // Handle error here if necessary
+                    })
+                    .finally(function () {
+                        // Re-enable the button after execution
+                        FineTuneButton.disabled = false;
+                    });
+            });
+        });
+
+    </script>
+
+    <script>
+            function downloadFile(downloadURL, fileName) {
+            // Send an AJAX request to trigger the file download
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET',downloadURL, true);
+            xhr.responseType = 'blob';
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    // Create a temporary anchor element to trigger the download
+                    var blob = new Blob([xhr.response], { type: 'application/octet-stream' });
+                    var url = window.URL.createObjectURL(blob);
+                    var a = document.createElement('a');
+                    a.href = url;
+                    a.download = fileName; // Set the desired filename
+                    a.style.display = 'none';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                }
+            };
+
+            xhr.send();
+        }
+
+    </script>
+
+
+    <script>
+        // Function to handle button selection and AJAX request
+        function selectOption(selectedOption) {
+            // Update the hidden input field with the selected option value
+            document.getElementById('selected_option').value = selectedOption;
+            const FineTuneButton = document.getElementById('fine-tune-button');
+            FineTuneButton.style.opacity = '1';
+
+            // Send an AJAX request to store the selection on the server
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/store_selection', true);
+            xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+
+            // Send the selected option to the server
+            xhr.send(JSON.stringify({ selection: selectedOption }));
+
+            // Optional: Display a confirmation message or update UI as needed
+            // For example, you can change the button background color to indicate selection
+            // Add a class to freeze the button's hover background
+            // Unselect all buttons
+            document.querySelectorAll(".dorik-btn").forEach(function (element) {
+                element.style.backgroundColor = '';
+                element.disabled = false;
+            });
+
+            // Style the selected button
+            var selectedButton = document.getElementById(selectedOption + '-button');
+            selectedButton.style.backgroundColor = '#3498db'; // Change to the desired background color
+            selectedButton.disabled = true;
+
+        }
+
+
+    </script>
+
 
 
 </body>
