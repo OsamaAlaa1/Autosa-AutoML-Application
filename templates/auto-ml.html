@@ -17,14 +17,15 @@
     <meta name="twitter:description"
         content="Autosa is a website for automating machine learning tasks, enabling anyone to work with data and gain insights from it." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:url" content="https://autosa.dorik.io/automation" />
+    <meta property="og:url" content="https://autosa.dorik.io/auto-ml" />
     <meta property="og:type" content="website" />
-    <link rel="canonical" href="automation" />
+    <link rel="canonical" href="auto-ml" />
     <script type="text/javascript"></script>
     <link as="font" rel="preload" href="https://fonts.cmsfly.com/css?family=Roboto+Regular:400&display=swap" />
     <link rel="stylesheet" href="https://fonts.cmsfly.com/css?family=Roboto+Regular:400&display=swap" />
-    <link rel="stylesheet" href="https://cdn.dorik.com/64f073c9ddc91c0034494272/css/automation.css?v=1693666748208" />
+    <link rel="stylesheet" href="https://cdn.dorik.com/64f073c9ddc91c0034494272/css/auto-ml.css?v=1694361776583" />
     <link rel="stylesheet" href="https://assets.dorik.io/shared/aos.css" />
+
     <style>
         .clock-hand {
             transform-origin: center;
@@ -49,16 +50,26 @@
         #regression-button,
         #fine-tune-button,
         #report-button,
-        #model-button
-        {
+        #model-button,
+        #open-button,
+        #showColumnsButton {
 
             opacity: 0;
             /* Start with the elements hidden */
             transition: opacity 0.5s ease-in-out;
             /* Add a smooth transition effect */
         }
-    </style>
 
+        /* Style the select menu */
+        select#targetColumn {
+            padding: 5px;
+            font-size: 16px;
+            border: 2px solid #775DDA;
+            border-radius: 5px;
+            width: 300px;
+            background-color: #f8f8f8;
+        }
+    </style>
 
 </head>
 
@@ -67,19 +78,19 @@
     <section class="dorik-section dorik-section-s2rdbmg1 " data-aos="fade-up" data-aos-delay="100"
         data-aos-duration="700">
         <div class="">
-            <div class="container symbol--oc8qavsv-wrapper    " data-aos="fade" data-aos-duration="100">
-                <div class="symbol--oc8qavsv dorik-row-46jdtn0g  flex  ">
-                    <div class="col-lg-1/3 col-xs-1/2 ">
-                        <div class="column-inner dorik-column-0rwclh4a  1/3">
-                            <div class="dorik-navbar--wrapper dorik-nav-1nn8ny6h-wrapper  ">
-                                <div class="dorik-navbar dorik-nav-1nn8ny6h ">
+            <div class="container dorik-row-91lek9kd-wrapper    ">
+                <div class="dorik-row-91lek9kd  flex  ">
+                    <div class="col-lg-1/1 ">
+                        <div class="column-inner dorik-column-5l1l4yrc  1/1">
+                            <div class="dorik-navbar--wrapper symbol--80znf54l-wrapper  ">
+                                <div class="dorik-navbar symbol--80znf54l dorik-nav-0tn7lvto ">
                                     <div class="dorik-navbar--brand"><a href="home"><img
-                                                src="https://cdn.dorik.com/6231c5ff317f6e0012e1bed0/64f073c9ddc91c0034494272/images/1_kckoq7sk.png"
-                                                alt="Logo Caption" width="500px" /></a></div><button
-                                        aria-label="Navbar Toggle" class="dorik-navbar--toggle"
-                                        data-target="#dorikNavbarCollapse"><svg aria-hidden="true" focusable="false"
-                                            data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-fw "
-                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                src="https://cdn.dorik.com/6231c5ff317f6e0012e1bed0/64f073c9ddc91c0034494272/images/1_xstzjkwe.png"
+                                                alt="Logo" width="224px" /></a></div><button aria-label="Navbar Toggle"
+                                        class="dorik-navbar--toggle" data-target="#dorikNavbarCollapse"><svg
+                                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                                            class="svg-inline--fa fa-bars fa-fw " role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <path fill="currentColor"
                                                 d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z">
                                             </path>
@@ -87,8 +98,25 @@
                                     <div class="dorik-navbar--collapse collapse" id="dorikNavbarCollapse">
                                         <div class="dorik-navbar--navs">
                                             <ul class="dorik-nav--links normalize">
-                                                <li class=""><a href="automation#" class="dorik-nav--link   "><span
-                                                            class="dorik-nav--link-text"></span></a></li>
+                                                <li class=""><a href="auto-ml" class="dorik-nav--link auto-ml  "><span
+                                                            class="dorik-nav--link-icon"></span><span
+                                                            class="dorik-nav--link-text">Auto-ML</span></a></li>
+                                                <li class=""><a href="auto-nlp" class="dorik-nav--link auto-nlp  "><span
+                                                            class="dorik-nav--link-icon"></span><span
+                                                            class="dorik-nav--link-text">Auto-NLP</span></a></li>
+                                                <li class=""><a href="auto-cv" class="dorik-nav--link auto-cv  "><span
+                                                            class="dorik-nav--link-icon"></span><span
+                                                            class="dorik-nav--link-text">Auto-CV</span></a></li>
+                                            </ul>
+                                            <ul class="dorik-nav--btns normalize">
+                                                <li><a href="auto-ml#"
+                                                        class="dorik-nav--btn dorik-nav--btn-yui5jpvx login "><span
+                                                            class="dorik-nav--btn-icon"></span><span
+                                                            class="dorik-nav--btn-text">Login</span></a></li>
+                                                <li><a href="auto-ml#"
+                                                        class="dorik-nav--btn dorik-nav--btn-5xmbnhej join-us "><span
+                                                            class="dorik-nav--btn-icon"></span><span
+                                                            class="dorik-nav--btn-text">Join Us</span></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -116,7 +144,7 @@
                             <div class="dorik-button-n4w0gelw-wrapper  el-ib"><a
                                     class="dorik-btn dorik-button-n4w0gelw  " href="home">Home</a></div>
                             <div class="dorik-button-ec3c5w6y-wrapper  el-ib"><a
-                                    class="dorik-btn dorik-button-ec3c5w6y  " href="automation#Automation"><svg
+                                    class="dorik-btn dorik-button-ec3c5w6y  " href="auto-ml#Automation"><svg
                                         aria-hidden="true" focusable="false" data-prefix="fas" data-icon="right-long"
                                         class="svg-inline--fa fa-right-long icon " role="img"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -132,15 +160,17 @@
         </div>
         <div class="">
             <div class="container dorik-row-6mob33ms-wrapper    " data-aos="zoom-in-up" data-aos-delay="200"
-                data-aos-duration="600">
+                data-aos-duration="600" data-aos-once="true">
                 <div class="dorik-row-6mob33ms  flex  ">
                     <div class="col-lg-1/1 ">
-                        <div class="column-inner dorik-column-e9qcfvtw  1/1"><a
-                                class="dorik-wrapper dorik-image-fedapob0-wrapper "
-                                href="https://github.com/OsamaAlaa1/Autosa-AutoML-Application/tree/main/pipelines%20and%20ready%20functions"
-                                target="_blank"><img
-                                    src="https://cdn.dorik.com/6231c5ff317f6e0012e1bed0/64f073c9ddc91c0034494272/images/lqth-shashh-2023-08-31-230439_uahbvucj.png"
-                                    alt="" loading="lazy" class="dorik-image-fedapob0 " /></a></div>
+                        <div class="column-inner dorik-column-e9qcfvtw  1/1">
+                            <div class="dorik-video-jvfo2i33-wrapper "><video loop="" controls="" playsinline=""
+                                    autoplay="" class="dorik-video-jvfo2i33 ">
+                                    <source
+                                        src="https://cdn.dorik.com/6231c5ff317f6e0012e1bed0/64f073c9ddc91c0034494272/videos/ml-auto_w7e789cs.mp4"
+                                        type="video/mp4" />Your browser doesn&#x27;t support HTML5 video tag.
+                                </video></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -173,6 +203,8 @@
             </div>
         </div>
     </section>
+
+
     <section class="dorik-section dorik-section-xj9nw3rv " id="Automation">
         <div class="">
             <div class="container dorik-row-rshgo24e-wrapper    " data-aos="fade-up" data-aos-delay="100">
@@ -196,6 +228,7 @@
                 </div>
             </div>
         </div>
+
         <div class="">
             <div class="container dorik-row-f3a21fwu-wrapper    ">
                 <div class="dorik-row-f3a21fwu  flex  ">
@@ -203,10 +236,10 @@
                         <div class="column-inner dorik-column-qfrjc8k7  2/3" data-aos="fade-right"
                             data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
                             <div class="dorik-text dorik-text-4uida0fi ">
-                                <p>First Step&nbsp;</p>
+                                <p>First Step. a&nbsp;</p>
                             </div>
                             <div class="dorik-wrapper dorik-heading-cmpomg3w-wrapper ">
-                                <h3 class="dorik-heading dorik-heading-cmpomg3w "><span>01. Upload the dataset
+                                <h3 class="dorik-heading dorik-heading-cmpomg3w "><span>01.a Upload the Dataset
                                     </span></h3>
                             </div>
                             <div class="dorik-text dorik-text-55dyv096 ">
@@ -215,16 +248,15 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-1/3 ">
                         <div class="column-inner dorik-column-49kskdql  1/3" data-aos="fade-left" data-aos-delay="200"
                             data-aos-duration="700" data-aos-once="true">
 
 
-
-
-
                             <form method="POST" action="/upload" enctype="multipart/form-data">
                                 <div class="dorik-button-eqmwid4v-wrapper el-ib">
+
                                     <label class="dorik-btn dorik-button-eqmwid4v">
 
                                         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="upload"
@@ -264,323 +296,384 @@
                                 </div>
                         </div>
                         </form>
-
                     </div>
-                </div>
-            </div>
-        </div>
-        </div>
+                    <div class="">
+                        <div class="container dorik-row-f3a21fwu-wrapper    ">
+                            <div class="dorik-row-f3a21fwu  flex  ">
+                                <div class="col-lg-1 ">
+                                    <div class="column-inner dorik-column-qfrjc8k7  2/3" data-aos="fade-right"
+                                        data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
+                                        <div class="dorik-text dorik-text-4uida0fi ">
+                                            <p>First Step. b&nbsp;</p>
+                                        </div>
+                                        <div class="dorik-wrapper dorik-heading-cmpomg3w-wrapper ">
+                                            <h3 class="dorik-heading dorik-heading-cmpomg3w "><span>01.b Select the
+                                                    Target Column
+                                                </span></h3>
+                                        </div>
+                                        <div class="dorik-text dorik-text-55dyv096 ">
+                                            <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span> It's
+                                                realy Important
+                                                to choose the target column in order to excute transformation and
+                                                fine-tuning correctly.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
 
+                                <button class="dorik-btn dorik-button-eqmwid4v" id="showColumnsButton">Show
+                                    Columns</button>
 
+                                <div id="columnsList" style="display: none;">
+                                    <label for="targetColumn" style="margin-left: 30px; margin-right: 15px;">Select
+                                        Target Column:</label>
 
-        <div class="">
-            <div class="container dorik-row-szs64osr-wrapper    ">
-                <div class="dorik-row-szs64osr  flex  ">
-                    <div class="col-lg-2/3 ">
-                        <div class="column-inner dorik-column-k3nvk3q1  2/3" data-aos="fade-right"
-                            data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
-                            <div class="dorik-text dorik-text-y6p6adyv ">
-                                <p>Second Step&nbsp;</p>
-                            </div>
-                            <div class="dorik-wrapper dorik-heading-qpse0usa-wrapper ">
-                                <h3 class="dorik-heading dorik-heading-qpse0usa "><span>02. Explore and Visualize&nbsp;
-                                    </span></h3>
-                            </div>
-                            <div class="dorik-text dorik-text-6sh598wk ">
-                                <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span><strong>
-                                    </strong>You can browse the functions used in this step and more in the
-                                    visualization notebook.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-1/3 ">
-                        <div class="column-inner dorik-column-frcqbcbv  1/3" data-aos="fade-left" data-aos-delay="200"
-                            data-aos-duration="700" data-aos-once="true">
+                                    <select id="targetColumn" name="targetColumn">
+                                    </select>
 
-
-                            <form method="POST" action="/explore" enctype="multipart/form-data">
-                                <div class="dorik-button-qeiu7bp4-wrapper el-ib">
-                                    <button class="dorik-btn dorik-button-qeiu7bp4" id="explore-button" type="button">
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fab"
-                                            data-icon="wpexplorer" class="svg-inline--fa fa-wpexplorer icon " role="img"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                            data-testid="icon-test">
-                                            <path fill="currentColor"
-                                                d="M512 256c0 141.2-114.7 256-256 256C114.8 512 0 397.3 0 256S114.7 0 256 0s256 114.7 256 256zm-32 0c0-123.2-100.3-224-224-224C132.5 32 32 132.5 32 256s100.5 224 224 224 224-100.5 224-224zM160.9 124.6l86.9 37.1-37.1 86.9-86.9-37.1 37.1-86.9zm110 169.1l46.6 94h-14.6l-50-100-48.9 100h-14l51.1-106.9-22.3-9.4 6-14 68.6 29.1-6 14.3-16.5-7.1zm-11.8-116.3l68.6 29.4-29.4 68.3L230 246l29.1-68.6zm80.3 42.9l54.6 23.1-23.4 54.3-54.3-23.1 23.1-54.3z">
-                                            </path>
-                                        </svg>
-                                        <span id="explore-text">Explore</span>
+                                    <button class="dorik-btn dorik-button-eqmwid4v" style="margin-left: 30px;"
+                                        id="saveTargetButton">
+                                        <span id="target-text">Save </span>
                                     </button>
                                 </div>
-                            </form>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="">
-            <div class="container dorik-row-iralblfh-wrapper    ">
-                <div class="dorik-row-iralblfh  flex  ">
-                    <div class="col-lg-1/2 ">
-                        <div class="column-inner dorik-column-d8j0h5cc  1/2" data-aos="fade-right"
-                            data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
-                            <div class="dorik-text dorik-text-kc8b6jrq ">
-                                <p>Third Step&nbsp;</p>
-                            </div>
-                            <div class="dorik-wrapper dorik-heading-qthzzie2-wrapper ">
-                                <h3 class="dorik-heading dorik-heading-qthzzie2 "><span>03. Prepare and Transform
-                                    </span></h3>
-                            </div>
-                            <div class="dorik-text dorik-text-2rt6jl7u ">
-                                <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span><strong>
-                                    </strong>You can browse the functions used in this step and more in the preparation
-                                    notebook.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-                    <div class="col-lg-1/4 ">
-                        <div class="column-inner dorik-column-nmn1e43i  1/4" data-aos="fade-left" data-aos-delay="200"
-                            data-aos-duration="700" data-aos-once="true">
-                            <div class="dorik-button-h7ql5vdc-wrapper  el-ib">
-
-                                <button class="dorik-btn dorik-button-h7ql5vdc" id="transform-button" type="button">
-
-                                    <svg aria-hidden="true" focusable="false" data-prefix="far"
-                                        data-icon="star-half-stroke" class="svg-inline--fa fa-star-half-stroke icon "
-                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
-                                        data-testid="icon-test">
-                                        <path fill="currentColor"
-                                            d="M341.5 13.5C337.5 5.2 329.1 0 319.9 0s-17.6 5.2-21.6 13.5L229.7 154.8 76.5 177.5c-9 1.3-16.5 7.6-19.3 16.3s-.5 18.1 5.9 24.5L174.2 328.4 148 483.9c-1.5 9 2.2 18.1 9.7 23.5s17.3 6 25.3 1.7l137-73.2 137 73.2c8.1 4.3 17.9 3.7 25.3-1.7s11.2-14.5 9.7-23.5L465.6 328.4 576.8 218.2c6.5-6.4 8.7-15.9 5.9-24.5s-10.3-14.9-19.3-16.3L410.1 154.8 341.5 13.5zM320 384.7V79.1l52.5 108.1c3.5 7.1 10.2 12.1 18.1 13.3l118.3 17.5L423 303c-5.5 5.5-8.1 13.3-6.8 21l20.2 119.6L331.2 387.5c-3.5-1.9-7.4-2.8-11.2-2.8z">
-                                        </path>
-                                    </svg>
-
-                                    <span id="transform-text">Transform</span>
-                                </button>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-                    <div class="col-lg-1/4 ">
-                        <div class="column-inner dorik-column-q4rxdhvl  1/4" data-aos="fade-left" data-aos-delay="200"
-                            data-aos-duration="700" data-aos-once="true">
-                            <div class="dorik-button-jcbc66d1-wrapper  el-ib">
-
-
-                                <button class="dorik-btn dorik-button-jcbc66d1" id="transformed-data-button"
-                                    type="button" onclick="downloadFile('/download_transform','transformed_data.csv')">
-
-                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="download"
-                                        class="svg-inline--fa fa-download icon " role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                        data-testid="icon-test">
-                                        <path fill="currentColor"
-                                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z">
-                                        </path>
-                                    </svg>
-
-                                    <span id="transformed-data-text">Transformed Data</span>
-                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="">
-            <div class="container dorik-row-va3m95cb-wrapper    ">
-                <div class="dorik-row-va3m95cb  flex  ">
-                    <div class="col-lg-3/5 ">
-                        <div class="column-inner dorik-column-oszp2pvo  3/5" data-aos="fade-right"
-                            data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
-                            <div class="dorik-text dorik-text-yw5ho5tq ">
-                                <p>Fourth Step&nbsp;</p>
+
+
+
+
+                <div class="">
+                    <div class="container dorik-row-szs64osr-wrapper    ">
+                        <div class="dorik-row-szs64osr  flex  ">
+                            <div class="col-lg-1/2 ">
+                                <div class="column-inner dorik-column-k3nvk3q1  2/3" data-aos="fade-right"
+                                    data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
+                                    <div class="dorik-text dorik-text-y6p6adyv ">
+                                        <p>Second Step&nbsp;</p>
+                                    </div>
+                                    <div class="dorik-wrapper dorik-heading-qpse0usa-wrapper ">
+                                        <h3 class="dorik-heading dorik-heading-qpse0usa "><span>02. Explore and
+                                                Visualize&nbsp;
+                                            </span></h3>
+                                    </div>
+                                    <div class="dorik-text dorik-text-6sh598wk ">
+                                        <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span><strong>
+                                            </strong>You need to upload dataset first to explore the data, used
+                                            functions are in the
+                                            visualization notebook.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="dorik-wrapper dorik-heading-1ty820nn-wrapper ">
-                                <h3 class="dorik-heading dorik-heading-1ty820nn "><span>04. Select the Task&nbsp;
-                                    </span></h3>
+
+                            <div class="col-lg-1/4 ">
+                                <div class="column-inner dorik-column-frcqbcbv  1/4" data-aos="fade-left"
+                                    data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
+
+
+                                    <form method="POST" action="/explore" enctype="multipart/form-data">
+                                        <div class="dorik-button-qeiu7bp4-wrapper el-ib " style="margin-left: 85px;">
+                                            <button class="dorik-btn dorik-button-qeiu7bp4" id="explore-button"
+                                                type="button">
+                                                <span id="explore-text">Explore</span>
+                                            </button>
+                                        </div>
+                                    </form>
+
+                                </div>
                             </div>
-                            <div class="dorik-text dorik-text-ogt86dk8 ">
-                                <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span> choose the ML
-                                    task type Regression</p>
-                                <p>or Classification.</p>
+                            <div class="col-lg-1/4 ">
+                                <div class="column-inner dorik-column-frcqbcbv  1/4" data-aos="fade-left"
+                                    data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
+
+
+                                    <form method="POST" action="/explore" enctype="multipart/form-data">
+                                        <div class="dorik-button-qeiu7bp4-wrapper el-ib">
+                                            <!-- Use an anchor element to open "report.html" in a new tab -->
+                                            <a href="report" target="_blank" class="dorik-btn dorik-button-qeiu7bp4"
+                                                id="open-button">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fab"
+                                                    data-icon="wpexplorer" class="svg-inline--fa fa-wpexplorer icon "
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                    data-testid="icon-test">
+                                                    <path fill="currentColor"
+                                                        d="M512 256c0 141.2-114.7 256-256 256C114.8 512 0 397.3 0 256S114.7 0 256 0s256 114.7 256 256zm-32 0c0-123.2-100.3-224-224-224C132.5 32 32 132.5 32 256s100.5 224 224 224 224-100.5 224-224zM160.9 124.6l86.9 37.1-37.1 86.9-86.9-37.1 37.1-86.9zm110 169.1l46.6 94h-14.6l-50-100-48.9 100h-14l51.1-106.9-22.3-9.4 6-14 68.6 29.1-6 14.3-16.5-7.1zm-11.8-116.3l68.6 29.4-29.4 68.3L230 246l29.1-68.6zm80.3 42.9l54.6 23.1-23.4 54.3-54.3-23.1 23.1-54.3z">
+                                                    </path>
+                                                </svg>
+                                                <span id="open-text">Open</span>
+                                            </a>
+                                        </div>
+                                    </form>
+
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="col-lg-2/5 ">
-                        <div class="column-inner dorik-column-480ocxs6  2/5" data-aos="fade-left" data-aos-delay="200"
-                            data-aos-duration="700" data-aos-once="true">
-
-                            <form method="POST" action="/store_selection" id="selection-form">
-                                <button class="dorik-btn dorik-button-friz4g2j" id="classification-button" type="button"
-                                    onclick="selectOption('classification', this)">
-                                    <span id="classification-text">Classification</span>
-                                </button>
-                                <button class="dorik-btn dorik-button-friz4g2j" id="regression-button" type="button"
-                                    onclick="selectOption('regression', this)" style="margin-left: 30px;">
-                                    <span id="regression-text">Regression</span>
-                                </button>
-                                <!-- Hidden input field to store the selection -->
-                                <input type="hidden" name="selected_option" id="selected_option" value="">
-                            </form>
-
-
-
-
                         </div>
                     </div>
                 </div>
                 <div class="">
-                    <div class="container dorik-row-6q6qa33x-wrapper    ">
-                        <div class="dorik-row-6q6qa33x  flex  ">
-                            <div class="col-lg-2/3 ">
-                                <div class="column-inner dorik-column-hmmote4a  2/3" data-aos="fade-right"
+                    <div class="container dorik-row-iralblfh-wrapper    ">
+                        <div class="dorik-row-iralblfh  flex  ">
+                            <div class="col-lg-4/7 ">
+                                <div class="column-inner dorik-column-d8j0h5cc  4/7" data-aos="fade-right"
                                     data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
-                                    <div class="dorik-text dorik-text-6juggake ">
-                                        <p>Fivth Step&nbsp;</p>
+                                    <div class="dorik-text dorik-text-kc8b6jrq ">
+                                        <p>Third Step&nbsp;</p>
                                     </div>
-                                    <div class="dorik-wrapper dorik-heading-apgjv1pu-wrapper ">
-                                        <h3 class="dorik-heading dorik-heading-apgjv1pu "><span>05. Fine-Tuning
+                                    <div class="dorik-wrapper dorik-heading-qthzzie2-wrapper ">
+                                        <h3 class="dorik-heading dorik-heading-qthzzie2 "><span>03. Prepare and
+                                                Transform
                                             </span></h3>
                                     </div>
-                                    <div class="dorik-text dorik-text-48x4mi5k ">
-                                        <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span> You can
-                                            browse
-                                            the functions used in this step and more in the Fine-Tuning notebook.</p>
+                                    <div class="dorik-text dorik-text-2rt6jl7u ">
+                                        <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span><strong>
+                                            </strong>You need to select target column first to transform data, used
+                                            functions are in the preparation
+                                            notebook.</p>
                                     </div>
                                 </div>
                             </div>
 
 
 
-                            <div class="col-lg-1/3 ">
-                                <div class="column-inner dorik-column-ef93iwns  1/3" data-aos="fade-left"
-                                    data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
-                                    <div class="dorik-button-nwnz57vw-wrapper  el-ib">
 
-                                        <button class="dorik-btn dorik-button-nwnz57vw" id="fine-tune-button"
+                            <div class="col-lg-1/7 ">
+                                <div class="column-inner dorik-column-nmn1e43i  1/7" data-aos="fade-left"
+                                    data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
+                                    <div class="dorik-button-h7ql5vdc-wrapper  el-ib">
+
+                                        <button class="dorik-btn dorik-button-h7ql5vdc" id="transform-button"
                                             type="button">
+
                                             <svg aria-hidden="true" focusable="false" data-prefix="far"
-                                                data-icon="square-caret-right"
-                                                class="svg-inline--fa fa-square-caret-right icon " role="img"
-                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                data-icon="star-half-stroke"
+                                                class="svg-inline--fa fa-star-half-stroke icon " role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
                                                 data-testid="icon-test">
                                                 <path fill="currentColor"
-                                                    d="M400 96c0-8.8-7.2-16-16-16L64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320zM384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM320 256c0 6.7-2.8 13-7.7 17.6l-112 104c-7 6.5-17.2 8.2-25.9 4.4s-14.4-12.5-14.4-22l0-208c0-9.5 5.7-18.2 14.4-22s18.9-2.1 25.9 4.4l112 104c4.9 4.5 7.7 10.9 7.7 17.6z">
+                                                    d="M341.5 13.5C337.5 5.2 329.1 0 319.9 0s-17.6 5.2-21.6 13.5L229.7 154.8 76.5 177.5c-9 1.3-16.5 7.6-19.3 16.3s-.5 18.1 5.9 24.5L174.2 328.4 148 483.9c-1.5 9 2.2 18.1 9.7 23.5s17.3 6 25.3 1.7l137-73.2 137 73.2c8.1 4.3 17.9 3.7 25.3-1.7s11.2-14.5 9.7-23.5L465.6 328.4 576.8 218.2c6.5-6.4 8.7-15.9 5.9-24.5s-10.3-14.9-19.3-16.3L410.1 154.8 341.5 13.5zM320 384.7V79.1l52.5 108.1c3.5 7.1 10.2 12.1 18.1 13.3l118.3 17.5L423 303c-5.5 5.5-8.1 13.3-6.8 21l20.2 119.6L331.2 387.5c-3.5-1.9-7.4-2.8-11.2-2.8z">
                                                 </path>
                                             </svg>
 
-                                            <span id="fine-tune-text">Fine-Tune</span>
+                                            <span id="transform-text">Transform</span>
                                         </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-
-                <div class="">
-                    <div class="container dorik-row-n75vggxk-wrapper    ">
-                        <div class="dorik-row-n75vggxk  flex  ">
-                            <div class="col-lg-3/5 ">
-                                <div class="column-inner dorik-column-tw2ypedo  3/5" data-aos="fade-right"
-                                    data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
-                                    <div class="dorik-text dorik-text-xnryum2w ">
-                                        <p>Final Step :)</p>
-                                    </div>
-                                    <div class="dorik-wrapper dorik-heading-opccozkj-wrapper ">
-                                        <h3 class="dorik-heading dorik-heading-opccozkj "><span>06. Download Report and
-                                                Model
-                                            </span></h3>
-                                    </div>
-                                    <div class="dorik-text dorik-text-vr64j37r ">
-                                        <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span> Download
-                                            the
-                                            final report, which contains all steps and the final model after
-                                            fine-tuning.</p>
                                     </div>
                                 </div>
                             </div>
 
 
-                            <div class="col-lg-1/5 ">
-                                <div class="column-inner dorik-column-e2ijrnvf  1/5" data-aos="fade-left"
+
+
+                            <div class="col-lg-2/7 ">
+                                <div class="column-inner dorik-column-q4rxdhvl  2/7" data-aos="fade-left"
                                     data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
-                                    <div class="dorik-button-4xyj7ean-wrapper  el-ib">
-                                        <button class="dorik-btn dorik-button-4xyj7ean" id="report-button"
-                                            type="button" onclick="downloadFile('/download_report','report.pdf')">
-
-                                            <svg aria-hidden="true" focusable="false" data-prefix="far"
-                                                data-icon="file-lines" class="svg-inline--fa fa-file-lines icon "
-                                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                                data-testid="icon-test">
-                                                <path fill="currentColor"
-                                                    d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120z">
-                                                </path>
-                                            </svg>
-                                            <span id="report-text">Report</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                                    <div class="dorik-button-jcbc66d1-wrapper  el-ib">
 
 
-                            <div class="col-lg-1/5 ">
-                                <div class="column-inner dorik-column-d4zwitan  1/5" data-aos="fade-left"
-                                    data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
-                                    
-                                    <div class="dorik-button-t6fwrlk0-wrapper  el-ib">
-                                        
-                                        <button class="dorik-btn dorik-button-t6fwrlk0" id="model-button"
-                                        type="button" onclick="downloadFile('/download_model','model.pkl')">
-                                            
-                                            <svg aria-hidden="true" focusable="false"
-                                                data-prefix="fas" data-icon="download"
-                                                class="svg-inline--fa fa-download icon " role="img"
+                                        <button class="dorik-btn dorik-button-jcbc66d1" id="transformed-data-button"
+                                            type="button"
+                                            onclick="downloadZip('/download_zip','transformer_plus_data.zip')"
+                                            style="margin-left: 10px;">
+
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="download" class="svg-inline--fa fa-download icon " role="img"
                                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                                                 data-testid="icon-test">
                                                 <path fill="currentColor"
                                                     d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z">
                                                 </path>
+                                            </svg>
 
-                                            </svg> 
-                                            <span id="model-text">Model</span>
+                                            <span id="transformed-data-text">Transformer + Data</span>
                                         </button>
-                                        
-                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="">
+                    <div class="container dorik-row-va3m95cb-wrapper    ">
+                        <div class="dorik-row-va3m95cb  flex  ">
+                            <div class="col-lg-3/5 ">
+                                <div class="column-inner dorik-column-oszp2pvo  3/5" data-aos="fade-right"
+                                    data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
+                                    <div class="dorik-text dorik-text-yw5ho5tq ">
+                                        <p>Fourth Step&nbsp;</p>
+                                    </div>
+                                    <div class="dorik-wrapper dorik-heading-1ty820nn-wrapper ">
+                                        <h3 class="dorik-heading dorik-heading-1ty820nn "><span>04. Select the
+                                                Task&nbsp;
+                                            </span></h3>
+                                    </div>
+                                    <div class="dorik-text dorik-text-ogt86dk8 ">
+                                        <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span> choose
+                                            the ML
+                                            task type Regression</p>
+                                        <p>or Classification.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div class="col-lg-2/5 ">
+                                <div class="column-inner dorik-column-480ocxs6  2/5" data-aos="fade-left"
+                                    data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
+
+                                    <form method="POST" action="/store_selection" id="selection-form">
+                                        <button class="dorik-btn dorik-button-friz4g2j" id="classification-button"
+                                            type="button" onclick="selectOption('classification', this)">
+                                            <span id="classification-text">Classification</span>
+                                        </button>
+                                        <button class="dorik-btn dorik-button-friz4g2j" id="regression-button"
+                                            type="button" onclick="selectOption('regression', this)"
+                                            style="margin-left: 30px;">
+                                            <span id="regression-text">Regression</span>
+                                        </button>
+                                        <!-- Hidden input field to store the selection -->
+                                        <input type="hidden" name="selected_option" id="selected_option" value="">
+                                    </form>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="container dorik-row-6q6qa33x-wrapper    ">
+                                <div class="dorik-row-6q6qa33x  flex  ">
+                                    <div class="col-lg-2/3 ">
+                                        <div class="column-inner dorik-column-hmmote4a  2/3" data-aos="fade-right"
+                                            data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
+                                            <div class="dorik-text dorik-text-6juggake ">
+                                                <p>Fivth Step&nbsp;</p>
+                                            </div>
+                                            <div class="dorik-wrapper dorik-heading-apgjv1pu-wrapper ">
+                                                <h3 class="dorik-heading dorik-heading-apgjv1pu "><span>05. Fine-Tuning
+                                                    </span></h3>
+                                            </div>
+                                            <div class="dorik-text dorik-text-48x4mi5k ">
+                                                <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span>
+                                                    To activate this step need to select the task type
+                                                    , used functions are in the Fine-Tuning notebook.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-lg-1/3 ">
+                                        <div class="column-inner dorik-column-ef93iwns  1/3" data-aos="fade-left"
+                                            data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
+                                            <div class="dorik-button-nwnz57vw-wrapper  el-ib">
+
+                                                <button class="dorik-btn dorik-button-nwnz57vw" id="fine-tune-button"
+                                                    type="button">
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                                        data-icon="square-caret-right"
+                                                        class="svg-inline--fa fa-square-caret-right icon " role="img"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                        data-testid="icon-test">
+                                                        <path fill="currentColor"
+                                                            d="M400 96c0-8.8-7.2-16-16-16L64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320zM384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM320 256c0 6.7-2.8 13-7.7 17.6l-112 104c-7 6.5-17.2 8.2-25.9 4.4s-14.4-12.5-14.4-22l0-208c0-9.5 5.7-18.2 14.4-22s18.9-2.1 25.9 4.4l112 104c4.9 4.5 7.7 10.9 7.7 17.6z">
+                                                        </path>
+                                                    </svg>
+
+                                                    <span id="fine-tune-text">Fine-Tune</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="">
+                            <div class="container dorik-row-n75vggxk-wrapper    ">
+                                <div class="dorik-row-n75vggxk  flex  ">
+                                    <div class="col-lg-3/5 ">
+                                        <div class="column-inner dorik-column-tw2ypedo  3/5" data-aos="fade-right"
+                                            data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
+                                            <div class="dorik-text dorik-text-xnryum2w ">
+                                                <p>Final Step :)</p>
+                                            </div>
+                                            <div class="dorik-wrapper dorik-heading-opccozkj-wrapper ">
+                                                <h3 class="dorik-heading dorik-heading-opccozkj "><span>06. Download
+                                                        Report and
+                                                        Model
+                                                    </span></h3>
+                                            </div>
+                                            <div class="dorik-text dorik-text-vr64j37r ">
+                                                <p><span style="color: rgb(119,93,218);"><strong>Note:</strong></span>
+                                                    To Download
+                                                    the report, and final model you need to fine-tune the model.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-1/5 ">
+                                        <div class="column-inner dorik-column-e2ijrnvf  1/5" data-aos="fade-left"
+                                            data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
+                                            <div class="dorik-button-4xyj7ean-wrapper  el-ib">
+                                                <button class="dorik-btn dorik-button-4xyj7ean" id="report-button"
+                                                    type="button"
+                                                    onclick="downloadFile('/download_report','model_report.txt')">
+
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="far"
+                                                        data-icon="file-lines"
+                                                        class="svg-inline--fa fa-file-lines icon " role="img"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                                                        data-testid="icon-test">
+                                                        <path fill="currentColor"
+                                                            d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120z">
+                                                        </path>
+                                                    </svg>
+                                                    <span id="report-text">Report</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-1/5 ">
+                                        <div class="column-inner dorik-column-d4zwitan  1/5" data-aos="fade-left"
+                                            data-aos-delay="200" data-aos-duration="700" data-aos-once="true">
+
+                                            <div class="dorik-button-t6fwrlk0-wrapper  el-ib">
+
+                                                <button class="dorik-btn dorik-button-t6fwrlk0" id="model-button"
+                                                    type="button" onclick="downloadZip('/download_model','best_model.zip')">
+
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                        data-icon="download" class="svg-inline--fa fa-download icon "
+                                                        role="img" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 512 512" data-testid="icon-test">
+                                                        <path fill="currentColor"
+                                                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z">
+                                                        </path>
+
+                                                    </svg>
+                                                    <span id="model-text">Model</span>
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
     </section>
+
+
     <section class="dorik-section symbol--2fxa25e8 dorik-section-pmojkr4a ">
         <div class="">
             <div class="container dorik-row-pjirj0z6-wrapper    ">
@@ -592,14 +685,20 @@
                                     alt="" loading="lazy" class="dorik-image-zyoz1ynr " /></a></div>
                     </div>
                     <div class="col-lg-1/5 col-md-1/2 col-xs-7/8 ">
-                        <div class="column-inner dorik-column-utv0lonf  1/5">
-                            <ul class="dorik-list dorik-links-7dewpkcr ">
+                        <div class="column-inner dorik-column-znxet9eo  1/5">
+                            <ul class="dorik-list dorik-links-dxka2682 ">
                                 <li class="dorik-list--item"><a href="home" class="dorik-list--link "><span
-                                            class="dorik-list--icon"></span><span class="dorik-list--text">General
-                                            Pipelines</span></a></li>
-                                <li class="dorik-list--item"><a href="automation" class="dorik-list--link "><span
                                             class="dorik-list--icon"></span><span
-                                            class="dorik-list--text">Automation</span></a></li>
+                                            class="dorik-list--text">Home</span></a></li>
+                                <li class="dorik-list--item"><a href="auto-ml" class="dorik-list--link "><span
+                                            class="dorik-list--icon"></span><span class="dorik-list--text">Auto-ML
+                                        </span></a></li>
+                                <li class="dorik-list--item"><a href="auto-nlp" class="dorik-list--link "><span
+                                            class="dorik-list--icon"></span><span
+                                            class="dorik-list--text">Auto-NLP</span></a></li>
+                                <li class="dorik-list--item"><a href="auto-cv" class="dorik-list--link "><span
+                                            class="dorik-list--icon"></span><span
+                                            class="dorik-list--text">Auto-CV</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -633,6 +732,7 @@
             </div>
         </div>
     </section>
+
     <script>window.DORIK_PROJECT_ID = "64f073c9ddc91c0034494272";</script>
     <script>(function popupButton() {
             const popupLinks = document.querySelectorAll(`.popup-btn`);
@@ -689,7 +789,7 @@
     <script src="https://assets.dorik.io/shared/aos.js"></script>
     <script type="text/javascript">
             ; (function () {
-                var navbar = $(".dorik-nav-1nn8ny6h");
+                var navbar = $(".dorik-nav-0tn7lvto");
                 var navbarCollapse = $(".dorik-navbar--collapse");
                 (function ($, navbar, navbarCollapse) {
                     $(document).on("click", "a", function (e) {
@@ -731,7 +831,7 @@
             })();
 
         ; (function () {
-            var navbar = document.querySelector(".dorik-nav-1nn8ny6h");
+            var navbar = document.querySelector(".dorik-nav-0tn7lvto");
             (function toggleNav(el) {
                 const toggleBtn = el.querySelector(".dorik-navbar--toggle");
                 const navlist = toggleBtn.nextElementSibling;
@@ -818,21 +918,93 @@
     </script>
 
 
+    <script>
+        document.getElementById('showColumnsButton').addEventListener('click', function () {
+            // Fetch the column names from the server
+            fetch('/get_columns')
+                .then(response => response.json())
+                .then(data => {
+                    const targetColumnSelect = document.getElementById('targetColumn');
+                    targetColumnSelect.innerHTML = '';
+
+                    // Populate the dropdown with column names
+                    data.forEach(column => {
+                        const option = document.createElement('option');
+                        option.value = column;
+                        option.text = column;
+                        targetColumnSelect.appendChild(option);
+                    });
+
+                    // Show the column selection section
+                    const columnsList = document.getElementById('columnsList');
+                    columnsList.style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('Error fetching columns:', error);
+                });
+        });
+
+        document.getElementById('saveTargetButton').addEventListener('click', function () {
+            // Get the selected target column
+            const selectedTargetColumn = document.getElementById('targetColumn').value;
+            const targetText = document.getElementById('target-text');
+
+            // Send the selected target column to the server
+            fetch('/select_target', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `target_column=${selectedTargetColumn}`
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        // Show a green checkmark to the user
+                        targetText.textContent = 'Saved';
+                        transformButton.style.opacity = '1';
+
+
+                    } else {
+                        console.error('Error saving target column.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+
+    </script>
+
 
 
     <script>
+
+        const exploreButton = document.getElementById('explore-button');
+        const transformButton = document.getElementById('transform-button');
+        const clssificationButton = document.getElementById('classification-button');
+        const regressionButton = document.getElementById('regression-button');
+        const openButton = document.getElementById('open-button');
+        const transformedDataButton = document.getElementById('transformed-data-button');
+
+
+
+
+        // Disable the buttons
+        exploreButton.style.pointerEvents = 'none';
+        transformButton.style.pointerEvents = 'none';
+        classificationButton.style.pointerEvents = 'none';
+        regressionButton.style.pointerEvents = 'none';
+        openButton.style.pointerEvents = 'none';
+        transformedDataButton.style.pointerEvents = 'none';
+
         function uploadFile(input) {
+
             const fileInput = input;
             const uploadText = document.getElementById('upload-text');
             const loadingIndicator = document.getElementById('loading');
             const successIcon = document.getElementById('success');
-
-            // add buttons 
-            const exploreButton = document.getElementById('explore-button');
-            const transformButton = document.getElementById('transform-button');
-            const clssificationButton = document.getElementById('classification-button');
-            const regressionButton = document.getElementById('regression-button');
-
+            const showColumnsButton = document.getElementById('showColumnsButton');
 
 
 
@@ -851,17 +1023,22 @@
                     body: formData,
                 }).then(response => {
                     if (response.ok) {
+
                         // Hide the loading indicator and display the success icon
                         loadingIndicator.style.display = 'none';
                         successIcon.style.display = 'inline-block';
 
                         // Show the buttons after a successful upload
                         exploreButton.style.opacity = '1';
-                        transformButton.style.opacity = '1';
                         clssificationButton.style.opacity = '1';
                         regressionButton.style.opacity = '1';
+                        showColumnsButton.style.opacity = '1';
 
-
+                        //enable the buttons
+                        exploreButton.style.pointerEvents = 'auto';
+                        transformButton.style.pointerEvents = 'auto';
+                        classificationButton.style.pointerEvents = 'auto';
+                        regressionButton.style.pointerEvents = 'auto';
 
                         console.log('File uploaded successfully!');
                     } else {
@@ -875,11 +1052,13 @@
                 });
             }
         }
+
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const exploreButton = document.getElementById('explore-button');
+
             const buttonText = document.getElementById('explore-text');
+
 
             exploreButton.addEventListener('click', function () {
                 // Disable the button and show the loading indicator
@@ -894,6 +1073,9 @@
                     .then(function () {
                         // Hide loading and show success
                         buttonText.textContent = 'Completed';
+                        openButton.style.opacity = '1';
+                        openButton.style.pointerEvents = 'auto';
+
                     })
                     .catch(function (error) {
                         console.error('Error:', error);
@@ -909,9 +1091,7 @@
 
         document.addEventListener('DOMContentLoaded', function () {
 
-            const transformButton = document.getElementById('transform-button');
             const buttonText = document.getElementById('transform-text');
-            const transformedDataButton = document.getElementById('transformed-data-button');
 
 
 
@@ -929,6 +1109,8 @@
                         // Hide loading and show success
                         buttonText.textContent = 'Completed';
                         transformedDataButton.style.opacity = '1';
+                        transformedDataButton.style.pointerEvents = 'auto';
+
                     })
                     .catch(function (error) {
                         console.error('Error:', error);
@@ -984,10 +1166,38 @@
     </script>
 
     <script>
-            function downloadFile(downloadURL, fileName) {
+    
+        function downloadZip(downloadURL, fileName) {
+            // Send an AJAX request to trigger the zip folder download
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', downloadURL, true);
+            xhr.responseType = 'blob';
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    // Create a temporary anchor element to trigger the download
+                    var blob = new Blob([xhr.response], { type: 'application/zip' });
+                    var url = window.URL.createObjectURL(blob);
+                    var a = document.createElement('a');
+                    a.href = url;
+                    a.download = fileName; // Set the desired filename
+                    a.style.display = 'none';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                }
+            };
+
+            xhr.send();
+        }
+
+
+
+
+        function downloadFile(downloadURL, fileName) {
             // Send an AJAX request to trigger the file download
             var xhr = new XMLHttpRequest();
-            xhr.open('GET',downloadURL, true);
+            xhr.open('GET', downloadURL, true);
             xhr.responseType = 'blob';
 
             xhr.onload = function () {
